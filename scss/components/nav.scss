@@ -1,0 +1,321 @@
+@use "../abstracs/variables";
+
+.nav{
+    height: 7rem;
+    padding: 0 1.7rem 0 1.7rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    box-shadow: variables.$boxShadow;
+    width: 100%;
+
+    &__img{
+        display: block;
+        height: 3.1rem;
+        width: auto;
+    }
+
+    &__button{
+        font-size: 1.3rem;
+        border: none;
+        background: white;
+        padding: 0 2.4rem;
+
+        &:hover{
+            color: #5624d0;
+            cursor: pointer;
+        }
+    }
+
+    &__form{
+        height: 4.8rem;
+        border: 0.1rem solid black;
+        display: flex;
+        align-items: center;
+        border-radius: 3rem;
+        width: 100%;
+
+        &--button{
+            width: 7%;
+            height: 5rem;
+            background: transparent;
+            border: none;
+        }
+
+        &--buttonPhone{
+            display: none;
+            width: 7%;
+            height: 5rem;
+            background: transparent;
+            border: none;
+        }
+
+        &--icon{
+            font-size: 2rem;
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        &--search{
+            border: none;
+            width: 91%;
+            padding: 0 1rem 0 .4rem;
+            font-size: 1.3rem;
+        }
+    }
+
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        padding-left: 1.3rem;
+        width: 25%;
+        gap: 2.5rem;
+
+        &__wrapperImg{
+            display: none;
+        }
+
+        &--button{
+            font-size: 1.3rem;
+            border: none;
+            background: white;
+
+            &:hover{
+            color: #5624d0;
+            cursor: pointer;
+            }
+        }
+
+        &--icon{
+            background: none;
+            border: none;
+            font-size: 2.4rem;
+            color: black;
+        }
+    }
+
+    &__wrapper2{
+        height: 100%;
+        width: 15%;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        &--login{
+            padding: 1.2rem 2rem 1.2rem 2rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: black;
+            background: white;
+            border: 0.1rem solid black;
+        }
+
+        &--signin{
+            padding: 1.2rem 2rem 1.2rem 2rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: white;
+            background: rgba(0, 0, 0, 0.9);
+            border: 0.1rem solid black;
+        }
+
+        &--language{
+            padding: 1.1rem 1rem 1.1rem 1rem;
+            font-size: 1.6rem;
+            color: black;
+            background: white;
+            border: 0.1rem solid black;
+        }
+    }
+
+    &__wrapper3{
+        display: none;
+        justify-content: flex-start;
+        width: calc(100vw / 3);
+    }
+
+    &__wrapper4{
+        display: none;
+        justify-content: center;
+        width: calc(100vw / 3);
+    }
+
+    &__wrapper5{
+        display: none;
+        gap: 2rem;
+        justify-content: flex-end;
+        width: calc(100vw / 3);
+    }
+}
+
+@media screen and (max-width: 93.75rem){
+
+    .nav{
+
+        &__form{
+            width: 30%;
+        }
+
+        &__wrapper{
+            gap: 1rem;
+            justify-content: flex-start;
+        }
+
+        &__wrapper2{
+            justify-content: flex-start;
+        }
+    }
+}
+
+@media screen and (max-width: 73rem){
+    .nav{
+
+        &__form{
+            width: 25%;
+        }
+
+        &__wrapper{
+            gap: 1rem;
+            justify-content: flex-start;
+        }
+
+        &__wrapper2{
+            justify-content: flex-start;
+        }
+    }
+}
+
+@media screen and (max-width: 50rem){
+    
+    .nav{
+        width: 100vw;
+
+        &__img{
+            display: none;
+            height: 3.1rem;
+            width: auto;
+        }
+
+        &__button{
+            display: none;
+        }
+
+        &__form{
+            height: 4.8rem;
+            border: 0.1rem solid black;
+            display: flex;
+            align-items: center;
+            border-radius: 3rem;
+            width: 0%;
+            display: none;
+    
+            &__button{
+                width: 7%;
+                height: 5rem;
+                background: transparent;
+                border: none;
+            }
+    
+            &--icon{
+                font-size: 2rem;
+                color: rgba(0, 0, 0, 0.5);
+            }
+    
+            &--search{
+                border: none;
+                width: 91%;
+                padding: 0 1rem 0 .4rem;
+                font-size: 1.3rem;
+                display: none;
+            }
+        }
+
+        &__wrapper{
+            display: none;
+            align-items: center;
+            justify-content: flex-end;
+            width: 40%;
+
+            &__wrapperImg{
+                display: block;
+            }
+    
+            &--button{
+                display: none;
+                font-size: 1.3rem;
+                border: none;
+                background: white;
+    
+                &:hover{
+                color: #5624d0;
+                cursor: pointer;
+                }
+            }
+
+            &--buttonPhone{
+                display: block;
+                width: 7%;
+                height: 5rem;
+                background: transparent;
+                border: none;
+            }
+    
+            &--icon{
+                background: none;
+                border: none;
+                font-size: 2.4rem;
+                color: black;
+            }
+        }
+
+        &__wrapper2{
+            display: none;
+    
+            &--login{
+                display: none;
+            }
+    
+            &--signin{
+                display: none;
+            }
+    
+            &--language{
+                display: none;
+            }
+        }
+
+        &__wrapper3{
+            display: flex;
+            justify-content: flex-start;
+            width: calc(100vw / 3);
+        }
+
+        &__wrapper4{
+            display: flex;
+            justify-content: center;
+            width: calc(100vw / 3);
+        }
+
+        &__wrapper5{
+            display: flex;
+            gap: 4rem;
+            justify-content: flex-end;
+            width: calc(100vw / 3);
+
+            &--buttonPhone{
+                width: 20%;
+                height: 5rem;
+                background: transparent;
+                border: none;
+            }
+    
+            &--icon{
+                width: 20%;
+                background: none;
+                border: none;
+                font-size: 2.4rem;
+                color: black;
+            }
+        }
+    }
+}
+

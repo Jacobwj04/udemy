@@ -1,0 +1,126 @@
+@use "../abstracs/variables";
+
+.topics{
+    margin-top: 10rem;
+    width: 100vw;
+    min-height: 20vh;
+    background: #f3f3f3;
+
+    &__wrapper{
+        width: 75%;
+        padding: 7rem 2rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__header{
+        padding-bottom: 4rem;
+    }
+
+    &__h3{
+        font-size: 2.4rem;
+        font-weight: 700;
+        font-family: map-get(variables.$fontVars, "font");
+    }
+
+    &__lists{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20rem;
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    &__listItem{
+        list-style: none;
+    }
+
+    &__h4{
+        font-size: 2rem;
+        font-family: map-get(variables.$fontVars, "font");
+    }
+
+    &__a{
+        font-size: 1.8rem;
+        text-decoration: none;
+        font-family: map-get(variables.$fontVars, "font");
+        color: #5624d0;
+        text-decoration: underline;
+        font-weight: 700;
+    }
+
+    &__button{
+        padding: 1.2rem 2rem 1.2rem 2rem;
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: black;
+        background: #f3f3f3;
+        border: 0.1rem solid black;
+    }
+}
+
+@media screen and (max-width: 93.75rem){
+
+    .topics{
+        width: 100vw;
+    
+        &__wrapper{
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    
+        &__header{
+            padding-bottom: 4rem;
+        }
+    
+        &__h3{
+            font-size: 2.4rem;
+            font-weight: 700;
+            font-family: sans-serif;
+        }
+    
+        &__lists{
+            gap: 20rem;
+        }
+    
+        &__list{
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+    
+        &__listItem{
+            list-style: none;
+        }
+    
+        &__h4{
+            font-size: 2rem;
+            font-family: sans-serif;
+        }
+    
+        &__a{
+            font-size: 1.8rem;
+            text-decoration: none;
+            font-family: sans-serif;
+            color: #5624d0;
+            text-decoration: underline;
+            font-weight: 700;
+        }
+    
+        &__button{
+            padding: 1.4rem 2rem 1.4rem 2rem;
+            font-size: 2rem;
+            font-weight: 700;
+            color: black;
+            background: #f3f3f3;
+            border: 0.1rem solid black;
+        }
+    }
+}

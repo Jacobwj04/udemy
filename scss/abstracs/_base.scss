@@ -1,0 +1,13 @@
+@use "./mixins";
+@use "./variables";
+
+body{
+    min-height: 100vh;
+    font-size: 2rem;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+h2{
+    font-size: 200%;
+}

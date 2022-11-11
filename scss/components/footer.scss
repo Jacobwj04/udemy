@@ -1,0 +1,107 @@
+@use "../abstracs/variables";
+
+.footer{
+    margin-top: 7rem;
+    min-height: 15vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.9);
+
+    &__wrapper{
+        width: 100%;
+        padding: 5rem 5rem 0 5rem;
+        margin-left: auto;
+        margin-right: auto;
+
+        &--2{
+            width: 100%;
+            padding: 0 5rem;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__lists{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20rem;
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3rem;
+    }
+
+    &__listItem{
+        list-style: none;
+    }
+
+    &__links{
+        font-size: 1.5rem;
+        text-decoration: none;
+        font-family: map-get(variables.$fontVars, "font");
+        color: white;
+        font-weight: 500;
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+
+    &__button{
+        margin-left: 50rem;
+        padding: 1.2rem 2rem 1.2rem 2rem;
+        width: 15rem;
+        height: 4rem;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: white;
+        border: 0.05rem solid white;
+        background: transparent;
+    }
+
+    &__img{
+        height: 3rem;
+        width: auto;
+    }
+
+    &__p{
+        color: white;
+        font-family: map-get(variables.$fontVars, "font");
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 93.75rem){
+
+    .footer{
+        &__links{
+            font-size: 1.8rem;
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+    
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+
+        &__lists{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5rem;
+        }
+
+        &__button{
+            margin-left: 0rem;
+            padding: 1.4rem 2rem 1.4rem 2rem;
+            width: 15rem;
+            height: 6rem;
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
+            border: 0.05rem solid white;
+            background: transparent;
+        }
+    }
+}
